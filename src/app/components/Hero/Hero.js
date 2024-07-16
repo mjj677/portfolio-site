@@ -5,15 +5,13 @@ import { useTheme } from "../ThemeContext";
 import heroIcon from "/public/images/hero-img.png"
 import {HeroImages} from "./HeroImages";
 
-
-
 export const Hero = () => {
 
   const { theme, toggleTheme } = useTheme();
 
   const themeIconSrc = theme === 'light' ? HeroImages.themeIcon.light : HeroImages.themeIcon.dark
   const githubIconSrc = theme === 'light' ? HeroImages.githubIcon.light : HeroImages.githubIcon.dark
-  const linkedIconSrc = theme === 'light' ? HeroImages.githubIcon.light : HeroImages.githubIcon.dark
+  const linkedIconSrc = theme === 'light' ? HeroImages.linkedinIcon.light : HeroImages.linkedinIcon.dark
 
   return (
     <section id="hero" className={styles.container}>
@@ -26,7 +24,7 @@ export const Hero = () => {
           height={300}
         />
         <Image
-          className={styles.themeIcon}
+          className={`${styles.themeIcon} hover`}
           src={themeIconSrc}
           alt="Theme icon"
           width={50}
@@ -41,7 +39,7 @@ export const Hero = () => {
           Johnston
         </h1>
         <h2>Junior Software Developer</h2>
-        <span>
+        <span >
           <a href="https://github.com/mjj677" target="_blank">
             <Image
               src={githubIconSrc}
@@ -62,7 +60,7 @@ export const Hero = () => {
             />
           </a>
         </span>
-        <p>
+        <p className={styles.description}>
           Aspiring young software developer with a passion for technology and a
           keen eagerness to launch a successful career in the tech industry.
           Dedicated to continuous learning and innovation, ready to make a
