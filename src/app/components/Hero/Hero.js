@@ -1,23 +1,37 @@
+'use client'
 import styles from "./HeroStyles.module.css";
 import Image from "next/image";
+import { useTheme } from "../ThemeContext";
+import heroIcon from "/public/images/hero-img.png"
+import {HeroImages} from "./HeroImages";
+
+
 
 export const Hero = () => {
+
+  const { theme, toggleTheme } = useTheme();
+
+  const themeIconSrc = theme === 'light' ? HeroImages.themeIcon.light : HeroImages.themeIcon.dark
+  const githubIconSrc = theme === 'light' ? HeroImages.githubIcon.light : HeroImages.githubIcon.dark
+  const linkedIconSrc = theme === 'light' ? HeroImages.githubIcon.light : HeroImages.githubIcon.dark
+
   return (
     <section id="hero" className={styles.container}>
       <div className={styles.themeContainer}>
         <Image
           className={styles.hero}
-          src="/images/hero-img.png"
+          src={heroIcon}
           alt="A cartoon style profile picture"
           width={300}
           height={300}
         />
         <Image
           className={styles.themeIcon}
-          src="/images/sun.svg"
+          src={themeIconSrc}
           alt="Theme icon"
           width={50}
           height={50}
+          onClick={toggleTheme}
         />
       </div>
       <div className={styles.info}>
@@ -30,7 +44,7 @@ export const Hero = () => {
         <span>
           <a href="https://github.com/mjj677" target="_blank">
             <Image
-              src="/images/github-light.svg"
+              src={githubIconSrc}
               alt="GitHub icon"
               width={50}
               height={50}
@@ -41,7 +55,7 @@ export const Hero = () => {
             target="_blank"
           >
             <Image
-              src="/images/linkedin-light.svg"
+              src={linkedIconSrc}
               alt="LinkedIn icon"
               width={50}
               height={50}
@@ -55,7 +69,7 @@ export const Hero = () => {
           meaningful impact.
         </p>
         <a href="/resume.pdf" download>
-          <button className="hover" >Resume</button>
+          <button className="hover">Resume</button>
         </a>
       </div>
     </section>
