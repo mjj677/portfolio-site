@@ -1,0 +1,55 @@
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.container h1 {
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.container h3 {
+    padding-top: 20px;
+    padding-bottom: 25px;
+}
+
+.container span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.container img {
+    width: 40px;
+    padding-right: 20px;
+    transition: transform 200ms ease-in-out;
+}
+
+.container img:hover {
+    transform: scale(1.05);
+}
+
+
+
+.skillSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    margin-left: 20px;
+}
+
+.jestIcon {
+    height: 40px;
+    width: 40px;
+}
