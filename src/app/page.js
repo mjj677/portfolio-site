@@ -1,9 +1,16 @@
 import styles from "./styles/page.module.css";
-import { Hero } from "./components/Hero/Hero.js";
-import { Projects } from "./components/Projects/Projects";
-import { Stack } from "./components/Stack/Stack";
-import { ContactForm } from "./components/ContactForm/ContactForm";
-import { Footer } from "./components/Footer/Footer";
+import dynamic from "next/dynamic";
+const Hero = dynamic(() =>
+  import("./components/Hero/Hero.js", {
+    ssr: false,
+  })
+);
+const ContactForm = dynamic(() =>
+  import("./components/ContactForm/ContactForm")
+);
+const Projects = dynamic(() => import("./components/Projects/Projects"));
+const Stack = dynamic(() => import("./components/Stack/Stack"));
+const Footer = dynamic(() => import("./components/Footer/Footer"));
 
 export default function Home() {
   return (

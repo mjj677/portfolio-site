@@ -12,6 +12,7 @@ export const Hero = () => {
   const themeIconSrc = theme === 'light' ? HeroImages.themeIcon.light : HeroImages.themeIcon.dark
   const githubIconSrc = theme === 'light' ? HeroImages.githubIcon.light : HeroImages.githubIcon.dark
   const linkedIconSrc = theme === 'light' ? HeroImages.linkedinIcon.light : HeroImages.linkedinIcon.dark
+  const downloadIconSrc = theme === 'light' ? HeroImages.downloadIcon.light : HeroImages.downloadIcon.dark
 
   return (
     <section id="hero" className={styles.container}>
@@ -68,10 +69,21 @@ export const Hero = () => {
           Dedicated to continuous learning and innovation, ready to make a
           meaningful impact.
         </p>
-        <a href="/resume.pdf" target="_blank">
-          <button className="hover">Resume</button>
+        <a href="/resume.pdf" download>
+          <button className="hover">
+            Resume
+            <Image 
+            className={styles.downloadIcon}
+            src={downloadIconSrc}
+            alt="download icon"
+            width={50}
+            height={50}
+            />
+            </button>
         </a>
       </div>
     </section>
   );
 };
+
+export default Hero
