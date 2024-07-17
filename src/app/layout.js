@@ -1,4 +1,5 @@
 import { Inter } from "next/font/google";
+import Head from 'next/head'
 import "./styles/globals.css";
 import { ThemeProvider } from "./components/ThemeContext";
 
@@ -12,6 +13,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <Head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description}/>
+      </Head>
       <body className={inter.className}>
         <ThemeProvider>
         {children}

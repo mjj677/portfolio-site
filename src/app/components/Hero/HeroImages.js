@@ -1,4 +1,8 @@
 export const HeroImages = {
+    downloadIcon: {
+      light: "/images/downloadLight.png",
+      dark: "/images/downloadDark.png"
+    },
     themeIcon: {
       light: "/images/sun.svg",
       dark: "/images/moon.svg",

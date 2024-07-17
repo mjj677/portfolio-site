@@ -111,3 +111,5 @@ export const Stack = () => {
     </section>
   );
 };
+
+export default Stack
