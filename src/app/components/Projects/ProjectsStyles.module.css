@@ -5,9 +5,13 @@
 }
 
 .container img {
-    max-width: 300px;
+    max-width: 250px;
     align-self: center;
+    background-color: var(--project-card-bg);
     border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .container a {
@@ -25,4 +29,11 @@
     flex-direction: column;
     align-items: center;
     gap: 30px;
+    border-radius: 25px;
+    padding-bottom: 20px;
+}
+
+.projectsContainer p {
+    margin-top: 10px;
+    max-width: 30ch;
 }

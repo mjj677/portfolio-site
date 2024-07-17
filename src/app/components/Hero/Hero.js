@@ -42,6 +42,7 @@ export const Hero = () => {
         <span >
           <a href="https://github.com/mjj677" target="_blank">
             <Image
+              className={styles.linkIcon}
               src={githubIconSrc}
               alt="GitHub icon"
               width={50}
@@ -53,6 +54,7 @@ export const Hero = () => {
             target="_blank"
           >
             <Image
+            className={styles.linkIcon}
               src={linkedIconSrc}
               alt="LinkedIn icon"
               width={50}
@@ -66,7 +68,7 @@ export const Hero = () => {
           Dedicated to continuous learning and innovation, ready to make a
           meaningful impact.
         </p>
-        <a href="/resume.pdf" download>
+        <a href="/resume.pdf" target="_blank">
           <button className="hover">Resume</button>
         </a>
       </div>

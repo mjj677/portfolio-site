@@ -33,6 +33,14 @@
     align-self: center;
   }
 
+  .info .linkIcon {
+    transition: transform 200ms ease-in-out;
+  }
+
+  .info .linkIcon:hover {
+    transform: scale(1.1);
+  }
+
   .info button {
     background-color: var(--btn-color);
     color: var(--btn-text-color);
