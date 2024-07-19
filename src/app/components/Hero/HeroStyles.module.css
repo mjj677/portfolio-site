@@ -11,28 +11,6 @@
     max-width: 300px;
   }
 
-  .info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .info span {
-    display: flex;
-    gap: 25px;
-    justify-content: center;
-  }
-
-  .info span a img {
-    width: 40px;
-  }
-
-  .info a {
-    width: fit-content;
-    align-self: center;
-  }
-
   .info .linkIcon {
     transition: transform 200ms ease-in-out;
   }
@@ -40,6 +18,28 @@
   .info .linkIcon:hover {
     transform: scale(1.1);
   }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.info span {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+}
+
+.info span a img {
+  width: 40px;
+}
+
+.info a {
+  width: fit-content;
+  align-self: center;
 }
 
 .info button {
@@ -88,6 +88,8 @@
     align-self: center;
     text-align: center;
     justify-content: center;
+    margin: 0;
+    padding: 0;
 }
 
 .subheading {
@@ -97,6 +99,8 @@
 @media (max-width: 800px) {
     .info {
       width: 100%;
+      align-items: center;
+      text-align: center;
     }
 
     .info button {
@@ -106,6 +110,13 @@
 
     .themeIcon {
       right: 15%;
+    }
+
+    .description {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      text-align: center;
     }
   
 }
