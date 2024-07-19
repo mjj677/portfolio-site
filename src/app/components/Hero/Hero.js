@@ -39,7 +39,7 @@ export const Hero = () => {
           <br />
           Johnston
         </h1>
-        <h2>Junior Software Developer</h2>
+        <h2 className={styles.subheading}>Junior Software Developer</h2>
         <span >
           <a href="https://github.com/mjj677" target="_blank">
             <Image
