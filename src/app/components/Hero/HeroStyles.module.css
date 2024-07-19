@@ -42,7 +42,7 @@
   }
 }
 
-.container .info button {
+.info button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,16 +59,16 @@
   transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out !important;
 }
 
-.container .downloadIcon {
+.downloadIcon {
   height: 30px !important;
   width: 30px !important;
 }
 
-.container .info button:hover {
+.info button:hover {
   transform: scale(1.05);
 }
 
-.container .info button:active {
+.info button:active {
   transform: translateY(2px);
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
 }
@@ -94,14 +94,23 @@
   scale: 0.8;
 }
 
-@media (width <= 800px) {
+@media (max-width: 800px) {
+    .info {
+      width: 100%;
+    }
+
+    .info button {
+      width: 80%;
+      font-size: 18px;
+    }
+
     .themeIcon {
       right: 15%;
     }
   
 }
 
-@media (width >= 800px) {
+@media (min-width: 800px) {
   .container {
     margin-top: -150px;
     flex-direction: row-reverse;
@@ -115,11 +124,9 @@
   }
 }
 
-@media (width >= 1400px) {
-  .container {
+@media (min-width: 1400px) {
     .hero {
       max-width: 300px;
       width: 300px;
     }
-  }
 }
