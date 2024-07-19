@@ -8,13 +8,17 @@ const Hero = dynamic(() =>
 const ContactForm = dynamic(() =>
   import("./components/ContactForm/ContactForm")
 );
-const Projects = dynamic(() => import("./components/Projects/Projects"));
-const Stack = dynamic(() => import("./components/Stack/Stack"));
+const Projects = dynamic(() =>
+  import("./components/Projects/Projects", { ssr: false })
+);
+const Stack = dynamic(() => import("./components/Stack/Stack", { ssr: false }));
 const Footer = dynamic(() => import("./components/Footer/Footer"));
+const Navbar = dynamic(() => import("./components/Navbar/Navbar"))
 
 export default function Home() {
   return (
     <main className={styles.main}>
+      <Navbar />
       <Hero />
       <Projects />
       <Stack />
