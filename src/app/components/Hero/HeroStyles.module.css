@@ -6,6 +6,7 @@
   text-align: center;
   height: 100vh;
   min-height: 500px;
+  padding-top: 75px;
 
   .hero {
     max-width: 300px;
@@ -47,6 +48,7 @@
   align-items: center;
   justify-content: center;
   margin-top: 20px;
+  margin-bottom: 30px;
   background-color: var(--btn-color) !important;
   color: var(--btn-text-color) !important;
   border: none !important;
@@ -110,6 +112,7 @@
       width: 80%;
       font-size: 18px;
       align-self: center;
+      margin-bottom: 30px;
     }
 
     .themeIcon {
